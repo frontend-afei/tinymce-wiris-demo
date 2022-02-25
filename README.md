@@ -1,4 +1,4 @@
-# tinymce-demo
+# tinymce-wiris-demo
 在tinymce富文本编辑器中，插入百度的数学公式 kityformula-editor，wiris的数学公式、化学公式 MathType
 ## Project setup
 ```
