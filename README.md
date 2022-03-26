@@ -1,5 +1,5 @@
 # tinymce-wiris-demo
-在tinymce富文本编辑器中，插入百度的数学公式 kityformula-editor，wiris的数学公式、化学公式 MathType
+在tinymce富文本编辑器中，插入百度的 kityformula-editor（数学公式），wiris的MathType（数学公式、化学公式 ）
 
 掘金地址：https://juejin.cn/post/6998028941780844581
 
