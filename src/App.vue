@@ -3,6 +3,8 @@
     <editor
       api-key="x1vyup3vl25v8l18tt7a9fx5efi78ldg0x8crp5j8m63v9r5"
       :init="init"
+      :value="content"
+      @input="onInput"
     />
   </div>
 </template>
@@ -17,6 +19,7 @@ export default {
   },
   data() {
     return {
+      content: '',
       init: {
         height: 500,
         menubar: false,
@@ -40,20 +43,25 @@ export default {
         htmlAllowedTags: [".*"],
         htmlAllowedAttrs: [".*"],
         draggable_modal: true,
-        //自定义文件选择器的回调内容
+        // 自定义文件选择器的回调内容
         file_picker_callback: function (callback, value, meta) {
-          if (meta.filetype == "file") {
-            callback("mypage.html", { text: "My text" });
-          }
           if (meta.filetype == "image") {
-            callback("myimage.jpg", { alt: "My alt text" });
+            // ... 上传图片，拿到图片的 url ，假设为 myImage.jpg
+            callback("myImage.jpg", { alt: "My alt text" });
           }
           if (meta.filetype == "media") {
-            callback("movie.mp4", { source2: "alt.ogg", poster: "image.jpg" });
+            // ... 上传视频，拿到视频的 url ，假设为 myImage.mp4
+            // source2 为备用地址，poster 为封面
+            callback("myMovie.mp4", { source2: "alt.ogg", poster: "image.jpg" });
           }
         },
       },
     };
+  },
+  methods: {
+    onInput(content) {
+      console.log(content)
+    }
   },
 };
 </script>
